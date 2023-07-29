@@ -18,9 +18,8 @@ import Note from "../../components/Note/Note";
 
 const SingleVideo = () => {
   const { vid } = useParams();
-  const { videoData, videoDispatch } = useData();
+  const { videoData, videoDispatch, addNote, setAddNote } = useData();
   const [addPlay, setAddPlay] = useState(false);
-  const [addNote, setAddNote] =  useState(false)
 
   const data = videoData.videoList.find((ele) => ele._id.toString() === vid);
 
@@ -61,21 +60,22 @@ const SingleVideo = () => {
             <span onClick={() => setAddPlay(true)}>
               <PlaylistAddIcon />
             </span>
-            <div className="edit-play-container">{addPlay ? <CreatePlay /> : <></>}</div>
-            <span onClick={()=>setAddNote(true)}>
-             <EditNoteOutlinedIcon />
-             {addNote ?  <NoteModal id={data._id} /> : <></>}
+            <div className="edit-play-container">
+              {addPlay ? <CreatePlay /> : <></>}
+            </div>
+            <span onClick={() => setAddNote(true)}>
+              <EditNoteOutlinedIcon />
+              {addNote ? <NoteModal id={data._id} /> : <></>}
             </span>
           </div>
         </div>
-        
 
         <div>
           <h2>My Notes</h2>
           <div>
-            {
-              data?.note?.map((ele)=> <Note data={ele} />)
-            }
+            {data?.note?.map((ele) => (
+              <Note data={ele} />
+            ))}
           </div>
         </div>
       </div>

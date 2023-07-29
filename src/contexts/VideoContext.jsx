@@ -14,7 +14,7 @@ const VideoContext = createContext();
 export const VideoContextProvider = ({ children }) => {
   const [videoData, videoDispatch] = useReducer(videoReducer, initialValue);
   const [addPlayList, setAddPlayList] = useState(false);
-  
+  const [addNote, setAddNote] =  useState(false)
 
   useEffect(() => {
     videoDispatch({ type: GET_CATEGORY, payload: categories });
@@ -31,7 +31,7 @@ export const VideoContextProvider = ({ children }) => {
 
   return (
     <VideoContext.Provider
-      value={{ videoData, videoDispatch, addPlayList, setAddPlayList }}
+      value={{ videoData, videoDispatch, addPlayList, setAddPlayList,addNote, setAddNote }}
     >
       {children}
     </VideoContext.Provider>

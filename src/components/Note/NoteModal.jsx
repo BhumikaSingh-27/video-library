@@ -5,17 +5,29 @@ import CloseOutlinedIcon from "@mui/icons-material/CloseOutlined";
 import { useData } from "../../contexts/VideoContext";
 import { ADD_NOTE } from "../../reducer/actions";
 
-const NoteModal = ({id}) => {
-  const [note, setNote] =  useState({id:uuid(),data:""})
-  const {videoData, videoDispatch} = useData()
+const NoteModal = ({ id }) => {
+  const [note, setNote] = useState({ id: uuid(), data: "" });
+  const { videoData, videoDispatch, addNote, setAddNote } = useData();
   return (
     <div className="note-container">
-      <span>
+      <span onClick={() => setAddNote(!addNote)}>
         <CloseOutlinedIcon />
       </span>
       <div className="note-content">
-        <input className="input" value={note.data} onChange={(e)=>setNote(e.target.value)} type="text" placeholder="New note" />
-        <button onClick={()=>videoDispatch({type:ADD_NOTE, payload: {id,note}})}>Add Note</button>
+        <input
+          className="input"
+          value={note.data}
+          onChange={(e) => setNote(e.target.value)}
+          type="text"
+          placeholder="New note"
+        />
+        <button
+          onClick={() =>
+            videoDispatch({ type: ADD_NOTE, payload: { id, note } })
+          }
+        >
+          Add Note
+        </button>
       </div>
     </div>
   );
