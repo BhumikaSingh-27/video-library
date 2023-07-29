@@ -1,0 +1,12 @@
+.single-title{
+    text-align: start;
+    flex-grow: 1;
+}
+.edit{
+    display: flex;
+    gap:1rem;
+    justify-self: flex-end;
+}
+.edit span:hover{
+    cursor: pointer;
+}

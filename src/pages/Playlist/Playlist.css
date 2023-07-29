@@ -1,0 +1,11 @@
+
+#add-playlist{
+    border-radius: 50%;
+    padding: 1rem;
+    font-size: 2rem;
+    background-color: white;
+}
+
+#add-playlist:hover{
+    cursor: pointer;
+}

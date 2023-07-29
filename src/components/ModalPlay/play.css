@@ -1,0 +1,52 @@
+/* .modal-container {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(58, 53, 53, 0.516);
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 4;
+} */
+
+.modal-container{
+    position: relative;
+    box-shadow: 0 0.2rem 0.5rem 0.2rem hsla(260, 11%, 85%, 1);
+
+}
+.modal-play {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    box-shadow: 0 0.2rem 0.5rem 0.2rem hsla(260, 11%, 85%, 1);
+
+    
+    padding:1rem;
+    position: absolute;
+}
+.heading{
+    display: flex;
+    justify-content: space-between;
+}
+.heading span:hover{
+    cursor: pointer;
+}
+.playlist-input {
+    display: flex;
+    flex-direction: column;
+}
+
+.input {
+    width: 20rem;
+    padding: 0.2rem;
+    border-radius: 0.2rem;
+    font-size: 1rem;
+}
+
+button{
+    padding:  0.5rem 1rem;
+    font-weight: bold;
+}
+button:hover{
+    cursor:pointer;
+}

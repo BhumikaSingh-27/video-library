@@ -1,0 +1,11 @@
+.category{
+    display: flex;
+    flex-direction: column;
+    gap:1rem
+
+}
+
+.video-list{
+    display: flex;
+    gap:1rem;
+}

@@ -1,0 +1,13 @@
+.home-container{
+    display: flex;
+   flex-direction: column;
+   align-items: flex-start;;
+   gap:2rem;
+   flex-wrap: wrap;
+}
+
+.cat-items{
+    display: flex;
+    gap:2rem;
+    flex-wrap: wrap;
+}

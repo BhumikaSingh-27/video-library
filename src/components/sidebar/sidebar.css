@@ -1,0 +1,26 @@
+.sidebar {
+    position: sticky;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 20%;
+    /* background-color: white; */
+    margin-left: 5rem;
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.side-box {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    font-size: 1.5rem;
+    gap: 1rem
+}
+
+.not-link{
+    text-decoration: none;
+color:black
+}
