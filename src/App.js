@@ -21,7 +21,7 @@ function App() {
         <Route path="/watchLater" element={<WatchLater />}></Route>
         <Route path="/videoListing" element={<VideoListing />}></Route>
         <Route path="/playlist/:pid" element={<SinglePlaylist />}></Route>
-        <Route path="/single" element={<SingleVideo />}></Route>
+        <Route path="/single/:vid" element={<SingleVideo />}></Route>
       </Routes>
     </div>
   );

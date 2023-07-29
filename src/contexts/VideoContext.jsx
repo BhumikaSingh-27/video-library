@@ -14,6 +14,7 @@ const VideoContext = createContext();
 export const VideoContextProvider = ({ children }) => {
   const [videoData, videoDispatch] = useReducer(videoReducer, initialValue);
   const [addPlayList, setAddPlayList] = useState(false);
+  
 
   useEffect(() => {
     videoDispatch({ type: GET_CATEGORY, payload: categories });
@@ -23,7 +24,7 @@ export const VideoContextProvider = ({ children }) => {
   useEffect(() => {
     localStorage.setItem("data", JSON.stringify(videos));
   }, [videoData.videoList]);
-  
+
   useEffect(() => {
     localStorage.setItem("play", JSON.stringify(videoData.playlist));
   }, [videoData.playlist]);

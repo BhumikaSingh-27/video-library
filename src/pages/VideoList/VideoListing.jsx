@@ -3,10 +3,11 @@ import "./style.css";
 import Video from "../../components/videoCard/Video";
 import { useParams } from "react-router";
 import { useData } from "../../contexts/VideoContext";
+import { NavLink } from "react-router-dom";
 
 const VideoListing = () => {
   const { videoData } = useData();
-  console.log(videoData.selectedCat);
+ 
   const videoList = videoData.videoList.filter(
     (data) => data.category === videoData.selectedCat
   );
@@ -16,7 +17,7 @@ const VideoListing = () => {
       <h2>{videoData.selectedCat}</h2>
       <div className="cat-items">
         {videoList.map((data) => (
-          <div key={data._id}>
+         <div key={data._id}>
             {" "}
             <Video data={data} />
           </div>

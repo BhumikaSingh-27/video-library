@@ -6,6 +6,7 @@ export const initialValue = {
   videoList: JSON.parse(localStorage.getItem("data")) ?? [],
   selectedCat: localStorage.getItem("selectedCat") ?? "",
   playlist: JSON.parse(localStorage.getItem("play")) ?? [],
+  note:[]
 };
 
 export const videoReducer = (state, { type, payload }) => {
@@ -40,6 +41,13 @@ export const videoReducer = (state, { type, payload }) => {
         ...state,
         playlist: state.playlist.filter((data) => data.id !== payload),
       };
+    }
+
+    case action.ADD_NOTE: {
+      const update = state.videoList.map((data) =>
+        data._id === payload.id ? { ...data, note: [payload.note]} : data
+      );
+      return { ...state, videoList: update };
     }
     default:
       return state;

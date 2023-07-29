@@ -1,12 +1,40 @@
-.single-title{
+.single-page {
+    display: flex;
+    gap: 2rem
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.single-title {
     text-align: start;
     flex-grow: 1;
 }
-.edit{
+
+.edit {
     display: flex;
-    gap:1rem;
+    gap: 1rem;
     justify-self: flex-end;
+    display: relative;
 }
-.edit span:hover{
+
+.edit span:hover {
     cursor: pointer;
+}
+
+.edit-play-container {
+    z-index: 20;
+
+    position: absolute;
+}
+
+.card {
+    display: flex;
+}
+
+.sug {
+    z-index: 2;
 }

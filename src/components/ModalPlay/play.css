@@ -8,10 +8,14 @@
     align-items: center;
     z-index: 4;
 } */
-
+.create-play{
+  width:100%;
+  z-index: 2;
+}
 .modal-container{
     position: relative;
     margin-top: 1rem;
+    z-index: 88;
     /* box-shadow: 0 0.2rem 0.5rem 0.2rem hsla(260, 11%, 85%, 1); */
 
 }

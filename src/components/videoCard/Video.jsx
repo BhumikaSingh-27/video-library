@@ -7,6 +7,7 @@ import {
   REMOVE_FROM_WATCHLATER,
 } from "../../reducer/actions";
 import AccessTimeFilledIcon from "@mui/icons-material/AccessTimeFilled";
+import { NavLink } from "react-router-dom";
 
 const Video = ({ data }) => {
   const { videoDispatch } = useData();
@@ -21,7 +22,7 @@ const Video = ({ data }) => {
 
   return (
     <div>
-      <div className="video-list-container">
+      <NavLink className="not-link" to={`/single/${data._id}`}><div className="video-list-container">
         <div className="img-div">
           <img id="video-card-img" src={data.thumbnail} alt={data.title} />
         </div>
@@ -46,7 +47,7 @@ const Video = ({ data }) => {
             </span>
           </div>
         </div>
-      </div>
+      </div></NavLink> 
     </div>
   );
 };

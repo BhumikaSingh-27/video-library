@@ -1,11 +1,14 @@
 import React from 'react'
 import "./suggest.css"
-const Suggestion = () => {
+import { NavLink } from 'react-router-dom'
+const Suggestion = ({data}) => {
   return (
-    <div className='suggest'>
-        <div><img src="https://i.ytimg.com/vi/D6QM3Xed2J0/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAf7CiFYfUks7dtieegGd3O_eK1hg" alt="" /></div>
-        <div> title-creator</div>
+    <NavLink className="not-link" to={`/single/${data._id}`}><div className='suggest'>
+        <div><img src={data.thumbnail} alt={data.title} /></div>
+        <div> {data.title}</div>
+        <div> {data.creator}</div>
     </div>
+    </NavLink>
   )
 }
 
