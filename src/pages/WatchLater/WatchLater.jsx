@@ -3,7 +3,7 @@ import { useData } from "../../contexts/VideoContext";
 import Video from "../../components/videoCard/Video";
 
 const WatchLater = () => {
-  const { videoData, videoDispatch } = useData();
+  const { videoData } = useData();
 
   const video = videoData.videoList.filter((data) => data.watchLater);
 

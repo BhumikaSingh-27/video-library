@@ -6,3 +6,7 @@
 .cross:hover{
     cursor: pointer;
 }
+
+.play-desc{
+    padding: 1rem;
+}

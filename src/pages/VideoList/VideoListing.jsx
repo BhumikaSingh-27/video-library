@@ -13,7 +13,7 @@ const VideoListing = () => {
 
   return (
     <div className="category">
-      <h2>Category name</h2>
+      <h2>{videoData.selectedCat}</h2>
       <div className="cat-items">
         {videoList.map((data) => (
           <div key={data._id}>

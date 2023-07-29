@@ -20,7 +20,7 @@ function App() {
         <Route path="/playlist" element={<Playlist />}></Route>
         <Route path="/watchLater" element={<WatchLater />}></Route>
         <Route path="/videoListing" element={<VideoListing />}></Route>
-        <Route path="/playlist/:name" element={<SinglePlaylist />}></Route>
+        <Route path="/playlist/:pid" element={<SinglePlaylist />}></Route>
         <Route path="/single" element={<SingleVideo />}></Route>
       </Routes>
     </div>
